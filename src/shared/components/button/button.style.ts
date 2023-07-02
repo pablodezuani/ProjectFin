@@ -6,7 +6,7 @@ interface ButtonContainerPros {
 export const ButtonContainer = styled.TouchableOpacity <ButtonContainerPros>`
 width: 50%;
 height: 48px;
-border-radius: 4px;
+border-radius: 8px;
 background-color: #9850a0;
 justify-content: center;
 align-items: center;
