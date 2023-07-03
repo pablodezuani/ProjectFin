@@ -12,7 +12,7 @@ const text = ({color,type,...props}:TextProps) =>{
 const handlefontsize = useMemo(() =>{
     switch (type) {
         case textTypes.TITLE:
-            return '32px';
+            return '16px';
             default:
             return'16px';
     }
