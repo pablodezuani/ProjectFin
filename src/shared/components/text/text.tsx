@@ -20,7 +20,10 @@ const fontsize = useMemo(() =>{
         case textTypes.SUB_TITLE_REGULAR:
             return '20px';
     
-                
+            case textTypes.BUTTON_BOLD:
+                case textTypes.BUTTON_REGULAR:
+                    case textTypes.BUTTON_LIGHT:
+                        return'18px' ; 
         case textTypes. PARAGRAPH_SMALL_BOLD:
         case textTypes. PARAGRAPH_SMALL_LIGHT:
         case textTypes.PARAGRAPH_SMALL_REGULAR:
@@ -37,17 +40,20 @@ const fontsize = useMemo(() =>{
 const fontFamily = useMemo( () => {
     switch (type) {
     case textTypes.TITLE_BOLD:
+        case textTypes.BUTTON_BOLD:
     case textTypes.SUB_TITLE_BOLD:
     case textTypes. PARAGRAPH_SMALL_BOLD:
     case textTypes. PARAGRAPH_BOLD:
 return 'Poppins-Bold';
 case textTypes.TITLE_LIGHT:
     case textTypes.SUB_TITLE_LIGHT:
+        case textTypes.BUTTON_LIGHT:
         case textTypes. PARAGRAPH_SMALL_LIGHT:
             case textTypes. PARAGRAPH_LIGHT:
                 return 'Poppins-Light'
                 case textTypes.TITLE_REGULAR:
     case textTypes.SUB_TITLE_REGULAR:
+        case textTypes.BUTTON_REGULAR:
     case textTypes.PARAGRAPH_SMALL_REGULAR:
     case textTypes. PARAGRAPH_REGULAR:
 
