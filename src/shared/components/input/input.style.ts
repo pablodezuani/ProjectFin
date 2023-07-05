@@ -4,7 +4,7 @@ export const ContainerInput = styled.TextInput`
 width: 100%;
 height: 48px;
 padding: 16px;
-background-color: #f6e8ff;
+background-color: #FFFFFF;
 color: #888;
 border-radius: 8px;
 
