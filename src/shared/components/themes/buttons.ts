@@ -1,6 +1,6 @@
 export const buttonstheme = {
-primary:'primary',
-secondary:'secondary'
+    primary: 'primary',
+    secondary: 'secondary'
 
 
 
