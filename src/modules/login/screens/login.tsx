@@ -16,19 +16,14 @@ return (
     <ContainerLogin>
         <Text>Login:</Text>
       <Input />
-
-
         <Button type={theme.buttons.buttonsTheme.primary} 
         margin="16px"
-         title="ENTRAR" 
-         loadling
-        onPress={handleOnPress}/>
+         title="Acessar" 
+    
+      onPress={handleOnPress} />
 
     </ContainerLogin>
    </SafeAreaView>
 )
 }
 export default login;
-
-
-
