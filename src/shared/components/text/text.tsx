@@ -6,6 +6,7 @@ import { useMemo } from "react";
 interface TextProps extends TextPropsNative{
     color?: String;
     type?:String;
+    margin?: string;
   
 }
 const text = ({color,type,...props}:TextProps) =>{
