@@ -18,6 +18,12 @@ export const bluetheme = {
 };
 
 export const redtheme ={
-red:'#ff5757',
+rederro:'#ff5757',
 
+}
+
+
+export const letraPadrao = {
+
+    black80: '#383838',
 }

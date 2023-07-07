@@ -15,13 +15,16 @@ console.log ('Clicou');
 return (
    <View>
     <ContainerLogin>
-      <Input placeholder="Digite Seu E-mail" title="EMAIL: " />
+      <Input  errorMessage ='Usuário ou senha incorreta'
+      placeholder="Digite Seu E-mail" 
+      title="Email: " />
         <Button
 
          type={theme.buttons.buttonsTheme.primary} 
         margin="16px"
          title="Acessar" 
-      onPress={handleOnPress} 
+        
+       onPress={handleOnPress} 
       />
 
     </ContainerLogin>

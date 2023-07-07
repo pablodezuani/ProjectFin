@@ -5,14 +5,14 @@ interface ButtonContainerPros {
 }
 
 export const ButtonContainer = styled.TouchableOpacity <ButtonContainerPros>`
-width: 80%;
+width: 45%;
 height: 45px;
 border-radius: 8px;
 margin-top: 16px;
 flex-direction: row;
 background-color:${theme.colors.bluetheme.blue};
 justify-content: center;
-border-width: 1px;
+border-width: 2px;
 border-color: ${theme.colors.pinktheme.pink};
 align-items: center;
 ${(props)=> (props.margin ? `margin:${props.margin};`:'')}

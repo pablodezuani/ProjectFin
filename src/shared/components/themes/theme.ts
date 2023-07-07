@@ -1,13 +1,14 @@
 import { buttonstheme } from "./buttons";
-import { graytheme, neutralTheme, pinktheme,bluetheme } from "./colors";
+import { letraPadrao, redtheme ,graytheme, neutralTheme, pinktheme,bluetheme } from "./colors";
 
 export const theme ={
 colors:{
-    graytheme,
-    
+graytheme,
 neutralTheme,
 pinktheme,
 bluetheme,
+redtheme,
+letraPadrao,
 
 },
 buttons:{

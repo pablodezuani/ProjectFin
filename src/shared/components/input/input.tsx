@@ -4,19 +4,32 @@ import { DisplayFlexColumm } from "../../../modules/globalStyles/globalView.styl
 import { textTypes } from "../text/textTypes";
 import { theme } from "../themes/theme";
 
+
 interface InputProps extends TextInputProps {
   title: string;
+  errorMessage? : string;
 }
 
-const Input = ({ title, ...props }: InputProps) => {
+const Input = ({ title,errorMessage, ...props }: InputProps) => {
   return (
     <DisplayFlexColumm>
       {title && (
-        <Text margin =" 0px 0px 4px 16px "style={{ color: theme.colors.graytheme.gray100 }}>
+        <Text style={{ color: theme.colors.graytheme.gray100, marginLeft: 5, marginBottom: 8, }}>
           {title}
         </Text>
       )}
-      <ContainerInput {...props} />
+      <ContainerInput iserror ={!!errorMessage} {...props} />
+      {errorMessage && (
+        <Text 
+        style={{ color: theme.colors.redtheme.rederro,
+        
+             marginTop : 16,
+             marginLeft: 8,
+        
+        }}>
+            {errorMessage}
+        </Text>
+      )}
     </DisplayFlexColumm>
   );
 };
