@@ -9,7 +9,7 @@ interface TextProps extends TextPropsNative{
     margin?: string;
   
 }
-const text = ({color,type,...props}:TextProps) =>{
+const text = ({margin,color,type,...props}:TextProps) =>{
 const fontsize = useMemo(() =>{
     switch (type) {
         case textTypes.TITLE_BOLD:
@@ -64,6 +64,10 @@ return 'Poppins-Regular';
     }
 },[type]);
 
-return <ContainerText fontFamily={fontFamily }fontsize ={fontsize}{...props}/>;
+return <ContainerText 
+CustomMargin={margin} 
+fontFamily={fontFamily }
+fontsize ={fontsize}
+{...props}/>;
 };
 export default text;

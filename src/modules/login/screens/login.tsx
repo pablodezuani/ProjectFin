@@ -15,8 +15,9 @@ console.log ('Clicou');
 return (
    <View>
     <ContainerLogin>
-      <Input />
+      <Input placeholder="Digite Seu E-mail" title="EMAIL: " />
         <Button
+
          type={theme.buttons.buttonsTheme.primary} 
         margin="16px"
          title="Acessar" 

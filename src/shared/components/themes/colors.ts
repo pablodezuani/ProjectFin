@@ -16,3 +16,8 @@ export const pinktheme = {
 export const bluetheme = {
     blue: '#50E0EB',
 };
+
+export const redtheme ={
+red:'#ff5757',
+
+}
