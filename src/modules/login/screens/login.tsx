@@ -5,6 +5,7 @@ import Button from "../../../shared/components/button/button";
 import { ButtonSecondary } from "../../../shared/components/button/button.style";
 import { theme } from "../../../shared/components/themes/theme";
 import { Colors } from "react-native/Libraries/NewAppScreen";
+import { Icon } from "react-native-vector-icons/Icon";
 
 const login = () => {
 const handleOnPress = () =>{
@@ -15,9 +16,8 @@ console.log ('Clicou');
 return (
    <View>
     <ContainerLogin>
-      <Input  errorMessage ='Usuário ou senha incorreta'
-      placeholder="Digite Seu E-mail" 
-      title="Email: " />
+      <Input  placeholder="Digite Seu E-mail" title="Email: " />
+      <Input  secureTextEntry placeholder="Digite Sua senha" title="Senha: "/>
         <Button
 
          type={theme.buttons.buttonsTheme.primary} 

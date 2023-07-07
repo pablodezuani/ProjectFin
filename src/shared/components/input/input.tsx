@@ -3,22 +3,30 @@ import { ContainerInput } from "./input.style";
 import { DisplayFlexColumm } from "../../../modules/globalStyles/globalView.styles";
 import { textTypes } from "../text/textTypes";
 import { theme } from "../themes/theme";
+import { useState } from "react";
+import { Icon } from "react-native-vector-icons/Icon";
 
 
 interface InputProps extends TextInputProps {
   title: string;
   errorMessage? : string;
+  secureTextEntry?: boolean;
+  
 }
 
-const Input = ({ title,errorMessage, ...props }: InputProps) => {
+const Input = ({ secureTextEntry,title,errorMessage, ...props }: InputProps) => {
+
+const [currentSecure,setCurrentSecure] = useState <Boolean> (!! secureTextEntry);
+
   return (
     <DisplayFlexColumm>
       {title && (
-        <Text style={{ color: theme.colors.graytheme.gray100, marginLeft: 5, marginBottom: 8, }}>
+        <Text style={{ color: theme.colors.graytheme.gray100, marginLeft: 5, marginBottom: 8, marginTop: 8,}}>
           {title}
         </Text>
       )}
-      <ContainerInput iserror ={!!errorMessage} {...props} />
+      <Icon name="Eye"/>
+      <ContainerInput secureTextEntry ={currentSecure} iserror ={!!errorMessage} {...props} />
       {errorMessage && (
         <Text 
         style={{ color: theme.colors.redtheme.rederro,
