@@ -1,9 +1,11 @@
 import styled from "styled-components/native";
 import { theme } from "../themes/theme";
+import { Icon } from "../icon/icon";
 
 
 interface ContainerInputProps {
 iserror?: boolean;
+secureTextEntry?: boolean;
 
 }
 export const ContainerInput = styled.TextInput <ContainerInputProps>`
@@ -18,3 +20,11 @@ border-color: ${(props)=> props.iserror ? theme.colors.redtheme.rederro : theme.
 
 
 `;
+
+export const IconEye =styled(Icon)`
+position: absolute;
+right: 16px;
+top:12px
+
+
+`

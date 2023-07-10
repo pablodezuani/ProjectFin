@@ -16,8 +16,9 @@ console.log ('Clicou');
 return (
    <View>
     <ContainerLogin>
-      <Input  placeholder="Digite Seu E-mail" title="Email: " />
-      <Input  secureTextEntry placeholder="Digite Sua senha" title="Senha: "/>
+      <Input margin="0px 0px 8px 0px" placeholder="Digite Seu E-mail" title="Email:" />
+   
+      <Input   secureTextEntry placeholder="Digite Sua senha" title="Senha: "/>
         <Button
 
          type={theme.buttons.buttonsTheme.primary} 
