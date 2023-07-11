@@ -27,10 +27,13 @@ const Input = ({ margin,secureTextEntry, title, errorMessage, ...props }: InputP
         <Text
           style={{
   
-            color: theme.colors.graytheme.gray100,
+            color: theme.colors.pinktheme.pink,
             marginLeft: 10,
             marginBottom: 8,
             marginTop: 8,
+            fontSize:14,
+            fontWeight:"bold",
+          
           }}
         >
           {title}
