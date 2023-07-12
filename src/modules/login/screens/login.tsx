@@ -7,10 +7,12 @@ import { theme } from "../../../shared/components/themes/theme";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import React from "react";
 import {Icon} from '../../../shared/components/icon/icon';
+import axios from "axios";
 
 const login = () => {
-const handleOnPress = () =>{
+const handleOnPress = async () =>{
 console.log ('Clicou');
+
 
 };
 
@@ -25,7 +27,10 @@ return (
       <Input margin="0px 0px 8px 0px" placeholder="Digite Seu E-mail" title="Email:" />
    
       <Input   margin ="0px 0px 16px 0px" secureTextEntry placeholder="Digite Sua senha" title="Senha: "/>
-       
+      
+  <Text style={{fontSize:10,marginTop:8,justifyContent:"flex-end"}}> Esqueceu a sua senha? </Text>
+
+
         <Button
 
          type={theme.buttons.buttonsTheme.primary} 
