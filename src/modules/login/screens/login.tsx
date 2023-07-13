@@ -5,16 +5,38 @@ import Button from "../../../shared/components/button/button";
 import { ButtonSecondary } from "../../../shared/components/button/button.style";
 import { theme } from "../../../shared/components/themes/theme";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import React from "react";
+import React, { useState } from "react";
 import {Icon} from '../../../shared/components/icon/icon';
 import axios from "axios";
+import { NativeSyntheticEvent } from "react-native";
+import { TextInputChangeEventData } from "react-native";
 
 const login = () => {
+  const [email,setEmail] = useState <string>('');
+  const [passaword,setPassaword] = useState <string>('');
+  const [loading,setLoading]= useState <boolean>(false);
+  const [errorMessage,setErrorMessage]= useState <string>('');
+
 const handleOnPress = async () =>{
+  setLoading (true)
+const resultAxios = await axios.post('http://172.26.80.1:8080/auth',{
+  email,
+  passaword,
+}).catch(() => {
+  setErrorMessage('Usuário ou senha incorreta')
+});
+setLoading(false)
 console.log ('Clicou');
-
-
 };
+
+const handleOnChangeEmail =(event:NativeSyntheticEvent<TextInputChangeEventData>) =>{
+  setErrorMessage('');
+setEmail(event.nativeEvent.text);
+};
+const handleOnChangeSenha =(event:NativeSyntheticEvent<TextInputChangeEventData>) =>{
+  setErrorMessage('');
+  setPassaword(event.nativeEvent.text);
+}
 
 return (
    <View>
@@ -24,16 +46,29 @@ return (
     <Imagelogo  source={require('../../../assets/images/logo.png')} />
     
     
-      <Input margin="0px 0px 8px 0px" placeholder="Digite Seu E-mail" title="Email:" />
+      <Input 
+      value={email}
+      errorMessage={errorMessage} 
+      margin="0px 0px 8px 0px"
+       placeholder="Digite Seu E-mail" 
+       title="Email:" 
+       onChange={handleOnChangeEmail}/>
    
-      <Input   margin ="0px 0px 16px 0px" secureTextEntry placeholder="Digite Sua senha" title="Senha: "/>
+      <Input   
+      value={passaword}
+      margin ="0px 0px 16px 0px" 
+      secureTextEntry 
+      placeholder="Digite Sua senha" 
+      title="Senha: "
+      onChange={handleOnChangeSenha}/>
       
   <Text style={{fontSize:10,marginTop:8,justifyContent:"flex-end"}}> Esqueceu a sua senha? </Text>
 
 
         <Button
 
-         type={theme.buttons.buttonsTheme.primary} 
+         type={theme.buttons.buttonsTheme.primary}
+         loading ={loading}
         margin="16px"
          title="Acessar" 
       
