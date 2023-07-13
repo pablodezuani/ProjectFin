@@ -11,6 +11,8 @@ import axios from "axios";
 import { NativeSyntheticEvent } from "react-native";
 import { TextInputChangeEventData } from "react-native";
 import { useLogin } from "../hooks/useLogin";
+import { bluetheme } from "../../../shared/components/themes/colors";
+import ButtonWithIcon from "../../../shared/components/button/botaorede";
 
 const login = () => {
   const{
@@ -61,30 +63,30 @@ return (
        onPress={handleOnPress} 
       />
 
-<View>
-<Text
- style={{fontSize:16,marginTop:36}}> Acesse com </Text>
-
-
+<View style={{flexDirection: 'row'}}>
+  <Text style={{fontSize:16,marginTop: 36,color:'#8C2A96', fontWeight:"bold"}}>__________________    </Text>
+  <Text style={{fontSize:16,marginTop: 41,color:'#8C2A96', fontWeight:"bold"}}>Acesse com</Text>
+  <Text style={{fontSize:16,marginTop: 36,color:'#8C2A96', fontWeight:"bold"}}>    __________________</Text>
 </View>
+
 <View style={{flexDirection: 'row'}}>
 
-  <Icon name="instagram"  size={32} color="#1877F2" style={{marginRight: 36, marginTop: 36}} />
-  <Icon name="facebook"  size={32} color="#1877F2" style={{marginRight: 36, marginTop: 36}} />
-  <Icon name="google"  size={32} color="#4285F4" style={{marginTop: 36}} />
+  <Icon name="instagram"  size={32} color="#FF007f" style={{marginRight: 36, marginTop: 36}} />
+  <Icon name="facebook"  size={32} color="#3b5998" style={{marginRight: 36, marginTop: 36}} />
+  <Icon name="google"  size={32} color="#db4a39" style={{marginTop: 36}} />
 </View>
+
+
+
 <View>
-<Text style = {{marginTop: 90}}>
+<Text style = {{marginTop: 50}}>
   Não possui acesso ?{' '}
   <Text style={{color: 'orange', textDecorationLine: 'underline'}}>
     Cadastre-se
   </Text>
 </Text>
 </View>
-
-
-
-    </ContainerLogin>
+ </ContainerLogin>
    </View>
    
 );

@@ -32,6 +32,7 @@ export const ActivityIndicatorButton = styled.ActivityIndicator `
 margin-left: 8px;
 `;
 
+
 export const ButtonDisabled = styled(ButtonContainer)<ButtonContainerPros>`
 background-color: ${theme.colors.graytheme.gray100};
 `

@@ -15,7 +15,7 @@ height: 48px;
 padding: 16px;
 background-color: ${theme.colors.neutralTheme.white};
 color: ${theme.colors.pinktheme.pink};
-border-radius: 16px;
+border-radius: 24px;
 border-width: 1px;
 border-color: ${(props)=> props.iserror ? theme.colors.redtheme.rederro : theme.colors.pinktheme.pink};
 
