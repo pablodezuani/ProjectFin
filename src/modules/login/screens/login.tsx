@@ -10,34 +10,19 @@ import {Icon} from '../../../shared/components/icon/icon';
 import axios from "axios";
 import { NativeSyntheticEvent } from "react-native";
 import { TextInputChangeEventData } from "react-native";
+import { useLogin } from "../hooks/useLogin";
 
 const login = () => {
-  const [email,setEmail] = useState <string>('');
-  const [passaword,setPassaword] = useState <string>('');
-  const [loading,setLoading]= useState <boolean>(false);
-  const [errorMessage,setErrorMessage]= useState <string>('');
+  const{
+    email,
+    password,
+    loading,
+errorMessage,
+handleOnPress,
+handleOnChangeEmail,
+handleOnChangeSenha,
 
-const handleOnPress = async () =>{
-  setLoading (true)
-const resultAxios = await axios.post('http://172.26.80.1:8080/auth',{
-  email,
-  passaword,
-}).catch(() => {
-  setErrorMessage('Usuário ou senha incorreta')
-});
-setLoading(false)
-console.log ('Clicou');
-};
-
-const handleOnChangeEmail =(event:NativeSyntheticEvent<TextInputChangeEventData>) =>{
-  setErrorMessage('');
-setEmail(event.nativeEvent.text);
-};
-const handleOnChangeSenha =(event:NativeSyntheticEvent<TextInputChangeEventData>) =>{
-  setErrorMessage('');
-  setPassaword(event.nativeEvent.text);
-}
-
+  } = useLogin();
 return (
    <View>
 
@@ -55,7 +40,8 @@ return (
        onChange={handleOnChangeEmail}/>
    
       <Input   
-      value={passaword}
+      value={password}
+      errorMessage={errorMessage} 
       margin ="0px 0px 16px 0px" 
       secureTextEntry 
       placeholder="Digite Sua senha" 
