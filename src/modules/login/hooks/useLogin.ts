@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { NativeSyntheticEvent, TextInputChangeEventData } from "react-native";
+import ConnectionAPI, { ConnectionAPIPost } from "../../../shared/components/functions/connection/connectionsAPI";
 
 export const useLogin =() =>{
 
@@ -12,7 +13,7 @@ export const useLogin =() =>{
 
 const handleOnPress = async () =>{
   setLoading (true)
-const resultAxios = await axios.post('http://172.26.80.1:8080/auth',{
+const resultAxios = await ConnectionAPIPost('http://172.26.80.1:8080/auth',{
   email,
   password,
 }).catch(() => {
