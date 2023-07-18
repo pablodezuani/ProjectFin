@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { useState } from "react";
 import { NativeSyntheticEvent, TextInputChangeEventData } from "react-native";
 import ConnectionAPI, { ConnectionAPIPost } from "../../../shared/components/functions/connection/connectionsAPI";
@@ -9,8 +9,7 @@ export const useLogin =() =>{
 
     const [email,setEmail] = useState <string>('');
   const [password,setPassword] = useState <string>('');
-  const{authRequest,errorMassage,loading,user} =useRequest();
-  const [errorMessage,setErrorMessage]= useState <string>('');
+  const{authRequest,errorMessage,loading,setErrorMessage} = useRequest();
 
 const handleOnPress = async () =>{
   authRequest({
@@ -31,7 +30,7 @@ const handleOnChangeSenha =(event:NativeSyntheticEvent<TextInputChangeEventData>
     email,
     password,
     loading,
-errorMessage,
+    errorMessage,
 handleOnPress,
 handleOnChangeEmail,
 handleOnChangeSenha,

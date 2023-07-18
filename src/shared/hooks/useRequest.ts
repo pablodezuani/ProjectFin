@@ -7,7 +7,7 @@ import { UserType } from "../types/userType";
 export const useRequest =()=>{
 
     const[loading,setLoading] = useState <boolean> (false);
-    const[errorMassage,setErrorMessage] = useState <string> ('');
+    const[errorMessage,setErrorMessage] = useState <string> ('');
     const[user,setUser] = useState <UserType> ();
 
     const authRequest =async(body:RequestLogin) =>{
@@ -21,13 +21,14 @@ export const useRequest =()=>{
             setErrorMessage('Usuário ou senha incorreta');
           });
 
-        setLoading(false)
+        setLoading(false);
     }
         return{
             loading,
             user,
-            errorMassage,
+            errorMessage,
             authRequest,
+            setErrorMessage
         }
         
     }

@@ -19,7 +19,7 @@ const login = () => {
     email,
     password,
     loading,
-errorMessage,
+    errorMessage,
 handleOnPress,
 handleOnChangeEmail,
 handleOnChangeSenha,
