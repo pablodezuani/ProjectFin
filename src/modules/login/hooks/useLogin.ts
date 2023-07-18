@@ -2,25 +2,21 @@ import axios from "axios";
 import { useState } from "react";
 import { NativeSyntheticEvent, TextInputChangeEventData } from "react-native";
 import ConnectionAPI, { ConnectionAPIPost } from "../../../shared/components/functions/connection/connectionsAPI";
+import { useRequest } from "../../../shared/hooks/useRequest";
 
 export const useLogin =() =>{
 
 
     const [email,setEmail] = useState <string>('');
   const [password,setPassword] = useState <string>('');
-  const [loading,setLoading]= useState <boolean>(false);
+  const{authRequest,errorMassage,loading,user} =useRequest();
   const [errorMessage,setErrorMessage]= useState <string>('');
 
 const handleOnPress = async () =>{
-  setLoading (true)
-const resultAxios = await ConnectionAPIPost('http://172.26.80.1:8080/auth',{
+  authRequest({
   email,
-  password,
-}).catch(() => {
-  setErrorMessage('Usuário ou senha incorreta')
-});
-setLoading(false)
-console.log ('Clicou');
+  password,  
+  })
 };
 
 const handleOnChangeEmail =(event:NativeSyntheticEvent<TextInputChangeEventData>) =>{

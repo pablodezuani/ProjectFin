@@ -6,7 +6,7 @@ width: 100%;
 background-color: #edfefe ; 
 justify-content: center;
 align-items: center;
-padding: 16px;
+padding: 24px;
 `;
  export const Imagelogo = styled.Image `
  width: 320px;
@@ -14,3 +14,11 @@ padding: 16px;
 margin-bottom:24px;
 align-items: flex-start;
  `;
+
+export const ContainerRedes = styled.SafeAreaView`
+width: 100%;height: 100%;
+width: 100%;
+background-color: #8C2A96 ; 
+justify-content: center;
+padding: 24px;
+`;

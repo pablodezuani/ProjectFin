@@ -50,8 +50,7 @@ return (
       title="Senha: "
       onChange={handleOnChangeSenha}/>
       
-  <Text style={{fontSize:10,marginTop:8,justifyContent:"flex-end"}}> Esqueceu a sua senha? </Text>
-
+  <Text style={{fontSize:12,marginTop:8,marginStart:200,fontWeight:"bold"}}> Esqueceu a sua senha? </Text>
 
         <Button
 
