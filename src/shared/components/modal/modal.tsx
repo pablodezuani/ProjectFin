@@ -15,7 +15,9 @@ interface ModalProps extends ModalPropsReact {
 
 const Modal = ({ title, text, onCloseModal, ...props }: ModalProps) => {
   return (
-    <ModalReact animationType="slide" transparent={true} onRequestClose={onCloseModal} {...props}>
+    <ModalReact animationType="slide" 
+    transparent={true}
+     onRequestClose={onCloseModal} {...props}>
       <ContainerModal>
         <Text
           testID={modalTestId.MODAL_TITLE}

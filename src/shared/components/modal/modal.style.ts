@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
-import { theme } from '../themes/theme';
-import { Icon } from '../icon/Icon';
+import {theme} from '../themes/theme';
+import {Icon} from '../icon/Icon';
 
 export const ContainerModal = styled.View`
   position: absolute;
@@ -14,7 +14,7 @@ export const ContainerModal = styled.View`
   padding: 16px;
   z-index: 9;
 
-  shadow-color: ${theme.colors.graytheme.gray100};
+  shadow-color: ${theme.colors.pinktheme.pink};
   shadow-offset: {
     width: 0;
     height: 0;
