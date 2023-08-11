@@ -8,7 +8,7 @@ const App = () => {
     <Provider store={store}>
     <SafeAreaView> 
   <Login />
-<button></button>
+
 </SafeAreaView>
 </Provider>
   );
