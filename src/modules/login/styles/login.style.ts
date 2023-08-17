@@ -20,5 +20,5 @@ width: 100%;height: 100%;
 width: 100%;
 background-color: #8C2A96 ; 
 justify-content: center;
-padding: 24px;
+padding: 22px;
 `;
