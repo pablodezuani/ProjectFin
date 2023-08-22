@@ -6,9 +6,11 @@ import { UserType } from "../types/userType";
 import { useDispatch } from "react-redux";
 import { setUserAction } from "../../store/reducers/userReducers";
 import { useUserReducer } from "../../store/reducers/userReducers/useUserReducer";
+import { useGlobalReducer } from "../../store/reducers/GlobalReducer/useGlobalReducer";
 
 export const useRequest =()=>{
 const {setUser} =useUserReducer();
+const{ setModal } =useGlobalReducer();
     const[loading,setLoading] = useState <boolean> (false);
     const[errorMessage,setErrorMessage] = useState <string> ('');
 
@@ -22,7 +24,9 @@ const {setUser} =useUserReducer();
 
       })
       .catch(() => {
-            setErrorMessage('Usuário ou senha incorreta');
+        setModal ('Erro','Usuário ou senha incorreta');
+        
+
           });
 
         setLoading(false);

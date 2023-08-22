@@ -4,7 +4,7 @@ import { theme} from '../themes/theme'
 import Button from '../button/Button';
 import Text from '../text/Text';
 import { textTypes } from '../text/textTypes';
-import { modalTestId } from './__mocks__/modal.tesid'
+import { modalTestId } from '.././modal/__mocks__/modal.tesid'
 import { ContainerModal, IconCloseModal } from './modal.style';
 
 interface ModalProps extends ModalPropsReact {
