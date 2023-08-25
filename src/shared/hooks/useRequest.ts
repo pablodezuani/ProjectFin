@@ -4,9 +4,10 @@ import { ConnectionAPIPost } from "../components/functions/connection/connection
 import { returnLogin } from "../types/returnLogin";
 import { UserType } from "../types/userType";
 import { useDispatch } from "react-redux";
-import { setUserAction } from "../../store/reducers/userReducers";
+//import { setUserAction } from "../../store/reducers/userReducers";
 import { useUserReducer } from "../../store/reducers/userReducers/useUserReducer";
 import { useGlobalReducer } from "../../store/reducers/GlobalReducer/useGlobalReducer";
+import text from "../components/text/text";
 
 export const useRequest =()=>{
 const {setUser} =useUserReducer();
@@ -23,8 +24,14 @@ const{ setModal } =useGlobalReducer();
        setUser(result.user);
 
       })
+
+      //modal que vai apresentar erro quando usuario errar login ou senha.
       .catch(() => {
-        setModal ('Erro','Usuário ou senha incorreta');
+        setModal({
+          visible: true,
+          title: 'Erro',
+          text: 'Usuário ou senha inválidos',
+        });
         
 
           });

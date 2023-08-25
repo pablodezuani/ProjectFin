@@ -1,16 +1,21 @@
 import styled from 'styled-components/native';
 
 import {theme} from '../themes/theme';
-import {Icon} from '../icon/Icon';
+import {Icon} from '../icon/icon';
 
 export const ContainerModal = styled.View`
   position: absolute;
-  bottom: 0;
+  top: 20;
   background-color: ${theme.colors.neutralTheme.white};
-  height: 200px;
+  height: 50px;
+  width: 400px;
+  margin-left: 5px;
+  margin-right: 5;
 
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
+  border-bottom-left-radius:16px;
+  border-bottom-right-radius: 16px;
   padding: 16px;
   z-index: 9;
 
