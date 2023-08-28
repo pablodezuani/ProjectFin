@@ -26,8 +26,7 @@ const Modal = ({ title, text, onCloseModal, ...props }: ModalProps) => {
           color={theme.colors.graytheme.gray100}
         >
           {title}
-
-          <Button> </Button>
+       
         </Text>
       </ContainerModal>
     </ModalReact>

@@ -8,8 +8,10 @@ import { useDispatch } from "react-redux";
 import { useUserReducer } from "../../store/reducers/userReducers/useUserReducer";
 import { useGlobalReducer } from "../../store/reducers/GlobalReducer/useGlobalReducer";
 import text from "../components/text/text";
+import { useNavigation } from "@react-navigation/native";
 
 export const useRequest =()=>{
+const {navigate} =useNavigation();
 const {setUser} =useUserReducer();
 const{ setModal } =useGlobalReducer();
     const[loading,setLoading] = useState <boolean> (false);
@@ -21,16 +23,17 @@ const{ setModal } =useGlobalReducer();
 
   await ConnectionAPIPost<returnLogin>('http://172.26.80.1:8080/auth',body)
       .then((result) => {
-       setUser(result.user);
-
+        navigate('Home');
+        setUser(result.user);
+    
+      
       })
-
-      //modal que vai apresentar erro quando usuario errar login ou senha.
       .catch(() => {
         setModal({
           visible: true,
           title: 'Erro',
           text: 'Usuário ou senha inválidos',
+         
         });
         
 
