@@ -4,10 +4,8 @@ import { ConnectionAPIPost } from "../components/functions/connection/connection
 import { returnLogin } from "../types/returnLogin";
 import { UserType } from "../types/userType";
 import { useDispatch } from "react-redux";
-//import { setUserAction } from "../../store/reducers/userReducers";
 import { useUserReducer } from "../../store/reducers/userReducers/useUserReducer";
 import { useGlobalReducer } from "../../store/reducers/GlobalReducer/useGlobalReducer";
-import text from "../components/text/text";
 import { useNavigation } from "@react-navigation/native";
 
 export const useRequest =()=>{
@@ -23,8 +21,9 @@ const{ setModal } =useGlobalReducer();
 
   await ConnectionAPIPost<returnLogin>('http://172.26.80.1:8080/auth',body)
       .then((result) => {
-        navigate('Home');
+   navigate('Home');
         setUser(result.user);
+        
     
       
       })
