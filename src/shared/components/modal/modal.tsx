@@ -17,12 +17,14 @@ const Modal = ({ title, text, onCloseModal, ...props }: ModalProps) => {
     <ModalReact animationType="slide" 
     transparent={true}
      onRequestClose={onCloseModal} {...props}>
-      
           <ContainerModal>
+      <Text
+      color={theme.colors.pinktheme.pink}>
+
+      </Text>
     
-        <Text
     
-          type={textTypes.PARAGRAPH_SEMI_BOLD}
+        <Text  type={textTypes.PARAGRAPH_SEMI_BOLD}
           color={theme.colors.graytheme.gray100}
         >
           {title}

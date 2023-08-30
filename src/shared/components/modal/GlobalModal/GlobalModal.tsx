@@ -22,6 +22,6 @@ export interface GlobalModalType {
       />
     );
   };
-  
+
   export default GlobalModal;
   

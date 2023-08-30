@@ -1,29 +1,25 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { GlobalModalType } from '../../../shared/components/modal/globalModal/GlobalModal';
+import { UserType } from '../../../shared/types/userType';
 
-interface GlobalStore {
-  modal: GlobalModalType;
+interface UserStore {
+  user?: UserType;
 }
 
-const initialState: GlobalStore = {
-  modal: {
-    visible: false,
-    text: '',
-    title: '',
-  },
+const initialState: UserStore = {
+
 };
 
-export const globalSlice = createSlice({
-  name: 'globalReducer',
+export const userSlice = createSlice({
+  name: 'userReducer',
   initialState,
   reducers: {
-    setModalAction: (state, action: PayloadAction<GlobalModalType>) => {
-      state.modal = action.payload;
+    setUserAction: (state, action: PayloadAction<UserType>) => {
+      state.user = action.payload;
     },
   },
 });
 
-export const { setModalAction } = globalSlice.actions;
+export const { setUserAction } = userSlice.actions;
 
-export default globalSlice.reducer;
+export default userSlice.reducer;

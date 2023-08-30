@@ -30,14 +30,18 @@ export const useRequest = () => {
           routes: [{name: 'Home'}],
         });
       })
-      .catch(() => {
+
+      
+  
+      .catch((error) => {
+        console.log(error)
         setModal({
           visible: true,
           title: 'Erro',
           text: 'Usuário ou senha inválidos',
         });
       });
-
+    
     setLoading(false);
   };
   return {
