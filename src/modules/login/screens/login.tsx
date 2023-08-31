@@ -5,7 +5,7 @@ import Button from "../../../shared/components/button/button";
 import { ButtonSecondary } from "../../../shared/components/button/button.style";
 import { theme } from "../../../shared/components/themes/theme";
 import { Colors } from "react-native/Libraries/NewAppScreen";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {Icon} from '../../../shared/components/icon/icon';
 import axios from "axios";
 import { NativeSyntheticEvent } from "react-native";
@@ -13,6 +13,9 @@ import { TextInputChangeEventData } from "react-native";
 import { useLogin } from "../hooks/useLogin";
 import { bluetheme } from "../../../shared/components/themes/colors";
 import ButtonWithIcon from "../../../shared/components/button/botaorede";
+import ConnectionAPI, { ConnectionAPIGet } from "../../../shared/components/functions/connection/connectionsAPI";
+import { URL_USER } from "../../../shared/components/constants/urls";
+import { UserType } from "../../../shared/types/userType";
 
 const login = () => {
   const{
@@ -25,6 +28,16 @@ handleOnChangeEmail,
 handleOnChangeSenha,
 
   } = useLogin();
+
+useEffect (()=>{
+const test = async () =>{
+const resultBack = await ConnectionAPIGet <UserType>(URL_USER);
+console.log(resultBack);
+}
+test();
+},[]
+)
+
 return (
    <View>
 
