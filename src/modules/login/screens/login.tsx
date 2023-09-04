@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View, useWindowDimensions } from "react-native";
 import { ContainerLogin, Imagelogo } from "../styles/login.style";
 import Input from "../../../shared/components/input/input";
 import Button from "../../../shared/components/button/button";
@@ -11,15 +11,17 @@ import axios from "axios";
 import { NativeSyntheticEvent } from "react-native";
 import { TextInputChangeEventData } from "react-native";
 import { useLogin } from "../hooks/useLogin";
-import { bluetheme } from "../../../shared/components/themes/colors";
+import { bluetheme, redtheme } from "../../../shared/components/themes/colors";
 import ButtonWithIcon from "../../../shared/components/button/botaorede";
 import ConnectionAPI, { ConnectionAPIGet } from "../../../shared/components/functions/connection/connectionsAPI";
 import { URL_USER } from "../../../shared/components/constants/urls";
 import { UserType } from "../../../shared/types/userType";
 import { useNavigation } from "@react-navigation/native";
 import { MenuUrl } from "../../../shared/enums/MenuUrl.enum";
+//import logo from '../../../assets/images/pd.gif'
 
 const login = () => {
+  const { width } = useWindowDimensions();
   const{
     email,
     password,
@@ -35,7 +37,7 @@ return (
 
     
     <ContainerLogin>
-    <Imagelogo  source={require('../../../assets/images/logo.png')} />
+    <Imagelogo  source={require('../../../assets/images/logo.png')}/>
     
     
       <Input 

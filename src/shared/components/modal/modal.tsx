@@ -8,6 +8,7 @@ import { ContainerModal, IconCloseModal } from './modal.style';
 import { Icon } from '../icon/icon';
 import { useEffect } from 'react';
 import { pinktheme } from '../themes/colors';
+import { Imagelogo } from '../../../modules/login/styles/login.style';
 
 interface ModalProps extends ModalPropsReact {
   title: string;
@@ -26,7 +27,7 @@ const Modal = ({ title, text, onCloseModal, ...props }: ModalProps) => {
   return (
     <ModalReact animationType="slide" transparent={true} onRequestClose={onCloseModal} {...props}>
       <ContainerModal>
-        <Text color={theme.colors.pinktheme.pink}style={{textAlign:'center'}}>   Login ou senha Incorreta</Text>
+        <Text color={theme.colors.pinktheme.pink}style={{textAlign:'center'}}>   Login ou senha Incorreta </Text>
         
       </ContainerModal>
     </ModalReact>
