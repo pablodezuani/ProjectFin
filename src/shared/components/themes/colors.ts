@@ -15,6 +15,7 @@ export const pinktheme = {
 
 export const bluetheme = {
     blue: '#50E0EB',
+    azul:'#d1fafc',
 };
 
 export const redtheme ={
@@ -27,3 +28,4 @@ export const letraPadrao = {
 
     black80: '#383838',
 }
+

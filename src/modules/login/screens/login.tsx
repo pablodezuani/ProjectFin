@@ -16,6 +16,8 @@ import ButtonWithIcon from "../../../shared/components/button/botaorede";
 import ConnectionAPI, { ConnectionAPIGet } from "../../../shared/components/functions/connection/connectionsAPI";
 import { URL_USER } from "../../../shared/components/constants/urls";
 import { UserType } from "../../../shared/types/userType";
+import { useNavigation } from "@react-navigation/native";
+import { MenuUrl } from "../../../shared/enums/MenuUrl.enum";
 
 const login = () => {
   const{
@@ -28,16 +30,6 @@ handleOnChangeEmail,
 handleOnChangeSenha,
 
   } = useLogin();
-
-useEffect (()=>{
-const test = async () =>{
-const resultBack = await ConnectionAPIGet <UserType>(URL_USER);
-console.log(resultBack);
-}
-test();
-},[]
-)
-
 return (
    <View>
 

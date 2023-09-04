@@ -6,7 +6,7 @@ import {Icon} from '../icon/icon';
 export const ContainerModal = styled.View`
   position: absolute;
   top: 20px;
-  background-color: ${theme.colors.bluetheme.blue};
+  background-color: ${theme.colors.bluetheme.azul};
   height: 60px;
   width: 400px;
   margin-left: 5px;
