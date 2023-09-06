@@ -12,4 +12,5 @@ display: flex;
 margin: ${(props) => props.CustomMargin ? props.CustomMargin : '0px'};
 
 
-`
+`;
+

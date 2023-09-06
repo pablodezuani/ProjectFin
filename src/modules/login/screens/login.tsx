@@ -11,13 +11,13 @@ import axios from "axios";
 import { NativeSyntheticEvent } from "react-native";
 import { TextInputChangeEventData } from "react-native";
 import { useLogin } from "../hooks/useLogin";
-import { bluetheme, redtheme } from "../../../shared/components/themes/colors";
-import ButtonWithIcon from "../../../shared/components/button/botaorede";
-import ConnectionAPI, { ConnectionAPIGet } from "../../../shared/components/functions/connection/connectionsAPI";
-import { URL_USER } from "../../../shared/components/constants/urls";
-import { UserType } from "../../../shared/types/userType";
-import { useNavigation } from "@react-navigation/native";
-import { MenuUrl } from "../../../shared/enums/MenuUrl.enum";
+//import { bluetheme, redtheme } from "../../../shared/components/themes/colors";
+//import ButtonWithIcon from "../../../shared/components/button/botaorede";
+//import ConnectionAPI, { ConnectionAPIGet } from "../../../shared/components/functions/connection/connectionsAPI";
+//import { URL_USER } from "../../../shared/components/constants/urls";
+//import { UserType } from "../../../shared/types/userType";
+//import { useNavigation } from "@react-navigation/native";
+//import { MenuUrl } from "../../../shared/enums/MenuUrl.enum";
 //import logo from '../../../assets/images/pd.gif'
 
 const login = () => {
@@ -37,7 +37,7 @@ return (
 
     
     <ContainerLogin>
-    <Imagelogo  source={require('../../../assets/images/logo.png')}/>
+    <Imagelogo  source={require('../../../assets/images/COINZU.png')}/>
     
     
       <Input 
