@@ -1,12 +1,16 @@
 import { Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const Home  =() =>{
+
+const userReducer  =() =>{
 
 return(
-<Text>Home</Text>
+
+    <SafeAreaView>
+<Text>userReucer</Text>
+
+</SafeAreaView>
 
 )
-
 }
-
-export default Home;
+export default userReducer;
